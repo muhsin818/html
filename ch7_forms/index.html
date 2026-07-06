@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Patient Registration Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00f2fe,#43e97b,#38f9d7);
+    padding:40px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    overflow:hidden;
+}
+
+header{
+    background:linear-gradient(90deg,#1565C0,#26C6DA,#43A047);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+header h1{
+    font-size:35px;
+}
+
+form{
+    padding:30px;
+}
+
+fieldset{
+    border:3px solid #26C6DA;
+    border-radius:15px;
+    margin-bottom:25px;
+    padding:20px;
+    background:#f9fdff;
+}
+
+legend{
+    background:#26C6DA;
+    color:white;
+    padding:8px 20px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+    color:#1565C0;
+}
+
+input,
+select,
+textarea,
+button{
+    width:100%;
+    padding:12px;
+    border:2px solid #bdbdbd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#00BCD4;
+    outline:none;
+    box-shadow:0 0 8px #26C6DA;
+}
+
+textarea{
+    resize:vertical;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+}
+
+button,
+input[type=submit],
+input[type=reset]{
+    background:#2196F3;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover{
+    background:#1565C0;
+}
+
+.inline{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:6px 0;
+}
+
+.inline input{
+    width:auto;
+}
+
+.progress-area{
+    margin-top:10px;
+}
+
+footer{
+    background:#1565C0;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+<h1>🏥 City General Hospital</h1>
+<h3>Patient Registration Form</h3>
+</header>
+
+<form action="https://google.com">
+
+<input type="hidden" name="patientID" value="P10001">
+
+<!-- PERSONAL INFORMATION -->
+
+<fieldset>
+
+<legend>👤 Personal Information</legend>
+
+<div class="grid">
+
+<div>
+<label>First Name</label>
+<input type="text" required placeholder="John">
+</div>
+
+<div>
+<label>Middle Name</label>
+<input type="text">
+</div>
+
+<div>
+<label>Last Name</label>
+<input type="text" required>
+</div>
+
+<div>
+<label>Password</label>
+<input type="password">
+</div>
+
+<div>
+<label>Email</label>
+<input type="email">
+</div>
+
+<div>
+<label>Phone</label>
+<input type="tel">
+</div>
+
+<div>
+<label>Website</label>
+<input type="url">
+</div>
+
+<div>
+<label>Search Existing Patient</label>
+<input type="search">
+</div>
+
+<div>
+<label>Age</label>
+<input type="number" min="0" max="120">
+</div>
+
+<div>
+<label>Date of Birth</label>
+<input type="date">
+</div>
+
+<div>
+<label>Birth Time</label>
+<input type="time">
+</div>
+
+<div>
+<label>Registration Date & Time</label>
+<input type="datetime-local">
+</div>
+
+<div>
+<label>Birth Month</label>
+<input type="month">
+</div>
+
+<div>
+<label>Birth Week</label>
+<input type="week">
+</div>
+
+</div>
+
+</fieldset>
+
+<!-- GENDER -->
+
+<fieldset>
+
+<legend>⚧ Gender</legend>
+
+<div class="inline">
+<input type="radio" name="gender">
+<label>Male</label>
+</div>
+
+<div class="inline">
+<input type="radio" name="gender">
+<label>Female</label>
+</div>
+
+<div class="inline">
+<input type="radio" name="gender">
+<label>Other</label>
+</div>
+
+</fieldset>
+
+<!-- ADDRESS -->
+
+<fieldset>
+
+<legend>🏠 Address</legend>
+
+<div class="grid">
+
+<div>
+<label>Country</label>
+
+<select>
+
+<optgroup label="Africa">
+<option>Kenya</option>
+<option>Uganda</option>
+<option>Tanzania</option>
+</optgroup>
+
+<optgroup label="Europe">
+<option>Germany</option>
+<option>France</option>
+<option>Italy</option>
+</optgroup>
+
+</select>
+
+</div>
+
+<div>
+<label>County/State</label>
+<input type="text">
+</div>
+
+<div>
+<label>City</label>
+
+<input list="cities">
+
+<datalist id="cities">
+<option>Mombasa</option>
+<option>Nairobi</option>
+<option>Kisumu</option>
+<option>Nakuru</option>
+</datalist>
+
+</div>
+
+<div>
+<label>Postal Code</label>
+<input type="text">
+</div>
+
+</div>
+
+<br>
+
+<label>Full Address</label>
+
+<textarea rows="4"></textarea>
+
+</fieldset>
+
+<!-- MEDICAL -->
+
+<fieldset>
+
+<legend>🩺 Medical Information</legend>
+
+<div class="grid">
+
+<div>
+<label>Blood Group</label>
+
+<select>
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB+</option>
+<option>AB-</option>
+<option>O+</option>
+<option>O-</option>
+</select>
+
+</div>
+
+<div>
+<label>Height (cm)</label>
+<input type="number">
+</div>
+
+<div>
+<label>Weight (kg)</label>
+<input type="number">
+</div>
+
+<div>
+<label>Pain Level</label>
+<input type="range" min="0" max="10">
+</div>
+
+<div>
+<label>Favorite Color (optional)</label>
+<input type="color">
+</div>
+
+</div>
+
+<br>
+
+<label>Medical History</label>
+<textarea rows="5"></textarea>
+
+<br><br>
+
+<label>Current Symptoms</label>
+<textarea rows="4"></textarea>
+
+</fieldset>
+
+<!-- ALLERGIES -->
+
+<fieldset>
+
+<legend>💊 Allergies</legend>
+
+<div class="inline">
+<input type="checkbox">
+<label>Penicillin</label>
+</div>
+
+<div class="inline">
+<input type="checkbox">
+<label>Latex</label>
+</div>
+
+<div class="inline">
+<input type="checkbox">
+<label>Peanuts</label>
+</div>
+
+<div class="inline">
+<input type="checkbox">
+<label>Seafood</label>
+</div>
+
+<div class="inline">
+<input type="checkbox">
+<label>No Known Allergies</label>
+</div>
+
+</fieldset>
+
+<!-- UPLOADS -->
+
+<fieldset>
+
+<legend>📂 Upload Documents</legend>
+
+<div class="grid">
+
+<div>
+<label>Patient Photo</label>
+<input type="file" accept="image/*">
+</div>
+
+<div>
+<label>Insurance Card</label>
+<input type="file">
+</div>
+
+<div>
+<label>Medical Report</label>
+<input type="file">
+</div>
+
+</div>
+
+</fieldset>
+
+<!-- EXTRA -->
+
+<fieldset>
+
+<legend>📊 Additional Information</legend>
+
+<label>Recovery Progress</label>
+
+<progress value="45" max="100"></progress>
+
+<br><br>
+
+<label>Health Meter</label>
+
+<meter value="75" min="0" max="100"></meter>
+
+<br><br>
+
+<label>Estimated Bill</label>
+
+<input id="bill" type="number" value="100">
+
+<label>Insurance Cover</label>
+
+<input id="cover" type="number" value="30"
+oninput="total.value=(bill.value-cover.value)">
+
+<br><br>
+
+<strong>Balance:</strong>
+
+<output name="total">70</output>
+
+</fieldset>
+
+<!-- BUTTONS -->
+
+<fieldset>
+
+<legend>✅ Submit</legend>
+
+<div class="buttons">
+
+<input type="submit" value="Register Patient">
+
+<input type="reset" value="Clear Form">
+
+<input type="button" value="Print" onclick="window.print()">
+
+<button type="button" onclick="alert('Thank you!')">
+Custom Button
+</button>
+
+</div>
+
+<br>
+
+<input type="image"
+src="https://dummyimage.com/180x60/0077cc/ffffff&text=Submit+Image"
+alt="Image Submit">
+
+</fieldset>
+
+</form>
+
+<footer>
+© 2026 City General Hospital • Patient Registration System
+</footer>
+
+</div>
+
+</body>
+</html>
