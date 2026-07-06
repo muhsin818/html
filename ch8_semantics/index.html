@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Website Layout</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Reset */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Body */
+
+      body {
+        background: #eef4ff;
+        color: #333;
+      }
+
+      /* Header */
+
+      header {
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+
+      header h1 {
+        font-size: 42px;
+      }
+
+      header p {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      /* Navigation */
+
+      nav {
+        background: #0d47a1;
+        position: sticky;
+        top: 0;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
+
+      nav ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 18px 25px;
+        font-weight: bold;
+        transition: 0.4s;
+      }
+
+      nav ul li a:hover {
+        background: #42a5f5;
+      }
+
+      /* Hero */
+
+      .hero {
+        background: linear-gradient(135deg, #00c9ff, #92fe9d);
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      .hero h2 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        width: 70%;
+        margin: 20px auto;
+        font-size: 18px;
+      }
+
+      .hero button {
+        background: #0d47a1;
+        color: white;
+        border: none;
+        padding: 15px 35px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.4s;
+      }
+
+      .hero button:hover {
+        background: #1565c0;
+        transform: scale(1.05);
+      }
+
+      /* Main */
+
+      main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 25px;
+        padding: 30px;
+      }
+
+      /* Article */
+
+      article {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      article h2 {
+        color: #1565c0;
+        margin-bottom: 15px;
+      }
+
+      article img {
+        width: 100%;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      article section {
+        background: #e3f2fd;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 10px;
+      }
+
+      /* Aside */
+
+      aside {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      aside h2 {
+        color: #8e24aa;
+        margin-bottom: 15px;
+      }
+
+      aside ul {
+        list-style: none;
+      }
+
+      aside ul li {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        transition: 0.3s;
+      }
+
+      aside ul li:hover {
+        background: #ede7f6;
+      }
+
+      /* Services */
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 30px;
+      }
+
+      .card {
+        background: white;
+        padding: 25px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card h3 {
+        color: #1565c0;
+        margin-bottom: 15px;
+      }
+
+      /* Figure */
+
+      figure {
+        padding: 30px;
+        text-align: center;
+      }
+
+      figure img {
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      figcaption {
+        margin-top: 10px;
+        font-style: italic;
+      }
+
+      /* Footer */
+
+      footer {
+        background: #0d47a1;
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+
+      footer address {
+        margin: 15px 0;
+        line-height: 1.8;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        .hero p {
+          width: 100%;
+        }
+
+        nav ul {
+          flex-direction: column;
+        }
+
+        nav ul li {
+          text-align: center;
+        }
+
+        .services {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>🌐 Semantic Website Layout</h1>
+      <p>Modern HTML5 Semantic Website</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Build Amazing Websites</h2>
+      <p>
+        Learn HTML5 Semantic Elements and CSS by creating beautiful, responsive
+        websites.
+      </p>
+
+      <button>Get Started</button>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+      <article>
+        <h2>Latest News</h2>
+
+        <img src="https://picsum.photos/900/350" alt="Technology" />
+
+        <p>
+          Semantic HTML makes websites more accessible, improves SEO, and keeps
+          your code clean and organized.
+        </p>
+
+        <section>
+          <h3>Why Use Semantic HTML?</h3>
+
+          <p>
+            Semantic tags describe the meaning of the content instead of just
+            its appearance.
+          </p>
+        </section>
+
+        <section>
+          <h3>Benefits</h3>
+
+          <ul>
+            <li>Better SEO</li>
+            <li>Improved Accessibility</li>
+            <li>Cleaner Code</li>
+            <li>Easy Maintenance</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside>
+        <h2>Quick Links</h2>
+
+        <ul>
+          <li>HTML Tutorial</li>
+          <li>CSS Tutorial</li>
+          <li>JavaScript</li>
+          <li>Bootstrap</li>
+          <li>PHP</li>
+          <li>Python</li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- Services -->
+
+    <section class="services">
+      <div class="card">
+        <h3>💻 Web Design</h3>
+        <p>Professional responsive websites.</p>
+      </div>
+
+      <div class="card">
+        <h3>📱 Mobile Apps</h3>
+        <p>Android & iOS applications.</p>
+      </div>
+
+      <div class="card">
+        <h3>☁ Cloud Computing</h3>
+        <p>Cloud deployment solutions.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Cyber Security</h3>
+        <p>Secure your systems and websites.</p>
+      </div>
+    </section>
+
+    <!-- Figure -->
+
+    <figure>
+      <img src="https://picsum.photos/1200/400" alt="Nature" />
+
+      <figcaption>Modern Responsive Website Layout</figcaption>
+    </figure>
+
+    <!-- Footer -->
+
+    <footer>
+      <h3>Contact Us</h3>
+
+      <address>
+        Email : info@example.com <br />
+        Phone : +254 700 000 000 <br />
+        Nairobi, Kenya
+      </address>
+
+      <p>&copy; 2026 Semantic HTML Website. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
